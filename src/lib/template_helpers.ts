@@ -103,6 +103,10 @@ export default {
   gt: (a: string | number, b: string | number) => parseAmount(a) > parseAmount(b),
   lte: (a: string | number, b: string | number) => parseAmount(a) <= parseAmount(b),
   lt: (a: string | number, b: string | number) => parseAmount(a) < parseAmount(b),
+  add: (a: string | number, b: string | number) => parseAmount(a) + parseAmount(b),
+  sub: (a: string | number, b: string | number) => parseAmount(a) - parseAmount(b),
+  mul: (a: string | number, b: string | number) => parseAmount(a) * parseAmount(b),
+  div: (a: string, b: string) => parseAmount(a) / parseAmount(b),
   negate: (value: string) => parseAmount(value) * -1,
   round(str: string, options: any) {
     return _.round(parseAmount(str), options.hash.precision || 0);
@@ -117,6 +121,8 @@ export default {
       }
     }
   },
+  max: (...args: (string | number)[]) => Math.max(...args.map(parseAmount)),
+  min: (...args: (string | number)[]) => Math.min(...args.map(parseAmount)),
   isDate(str: string, format: string) {
     if (!_.isString(str)) {
       return false;

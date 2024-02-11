@@ -186,6 +186,31 @@ Checks if a is less than or equal to b.
 
 Checks if a is less than b.
 
+#### `#!typescript max(...args: (string | number)[]): number`
+
+Finds the maximum value from the given values.
+
+#### `#!typescript min(...args: (string | number)[]): number`
+
+Finds the minimum value from the given values.
+
+#### `#!typescript add(a: string | number, b: string | number): number`
+
+Adds the given values. `(a + b)`
+
+#### `#!typescript sub(a: string | number, b: string | number): number`
+
+Subtracts the given values. `(a - b)`
+
+
+#### `#!typescript mul(a: string | number, b: string | number): number`
+
+Multiplies the given values. `(a * b)`
+
+#### `#!typescript div(a: string | number, b: string | number): number`
+
+Divides the given values. `(a / b)`
+
 #### `#!typescript negate(value: string | number): number`
 
 Negates the given value. For example, `negate("123.45")` will return
